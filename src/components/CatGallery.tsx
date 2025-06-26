@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -27,6 +28,7 @@ const CatGallery = () => {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
   const [selectedCat, setSelectedCat] = useState<Cat | null>(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleCatClick = (cat: Cat) => {
     setSelectedCat(cat);
@@ -58,68 +60,68 @@ const CatGallery = () => {
   const cats: Cat[] = [
     {
       id: 1,
-      name: "Simba",
-      breed: "Scottish Fold",
-      age: "8 weeks",
-      gender: "Male",
+      name: t('catGallery.cats.simba.name'),
+      breed: t('catGallery.cats.simba.breed'),
+      age: "8 " + t('common.weeks'),
+      gender: t('common.male'),
       color: "Golden",
       price: "$1,200",
       status: "available",
       image: "/simba.jpg",
-      description: "Beautiful golden Scottish Fold with perfect ears and sweet temperament.",
-      features: ["Health tested", "Vaccinated", "Pedigreed", "Home raised"]
+      description: t('catGallery.cats.simba.description'),
+      features: t('catGallery.cats.simba.features', { returnObjects: true }) as string[]
     },
     {
       id: 2,
-      name: "Elvis",
-      breed: "Scottish Straight",
-      age: "10 weeks",
-      gender: "Male",
+      name: t('catGallery.cats.elvis.name'),
+      breed: t('catGallery.cats.elvis.breed'),
+      age: "10 " + t('common.weeks'),
+      gender: t('common.male'),
       color: "Blue Point",
       price: "$1,100",
       status: "available",
       image: "/Elvis.jpg",
-      description: "Handsome Scottish Straight with striking blue point coloring and gentle personality.",
-      features: ["Health tested", "Vaccinated", "Pedigreed", "Socialized"]
+      description: t('catGallery.cats.elvis.description'),
+      features: t('catGallery.cats.elvis.features', { returnObjects: true }) as string[]
     },
     {
       id: 3,
-      name: "Kiara",
-      breed: "Scottish Fold",
-      age: "12 weeks",
-      gender: "Female",
+      name: t('catGallery.cats.kiara.name'),
+      breed: t('catGallery.cats.kiara.breed'),
+      age: "12 " + t('common.weeks'),
+      gender: t('common.female'),
       color: "Silver Tabby",
       price: "$1,300",
       status: "available",
       image: "/Kiara.jpg",
-      description: "Stunning silver tabby Scottish Fold with perfect fold ears and loving nature.",
-      features: ["Champion bloodline", "Health tested", "Vaccinated", "Registered"]
+      description: t('catGallery.cats.kiara.description'),
+      features: t('catGallery.cats.kiara.features', { returnObjects: true }) as string[]
     },
     {
       id: 4,
-      name: "Eva",
-      breed: "British Shorthair",
-      age: "9 weeks",
-      gender: "Female",
+      name: t('catGallery.cats.eva.name'),
+      breed: t('catGallery.cats.eva.breed'),
+      age: "9 " + t('common.weeks'),
+      gender: t('common.female'),
       color: "Blue",
       price: "$1,250",
       status: "reserved",
       image: "/Eva.jpg",
-      description: "Adorable blue British Shorthair with classic round features and gentle nature.",
-      features: ["Health tested", "Vaccinated", "Early socialized", "Litter trained"]
+      description: t('catGallery.cats.eva.description'),
+      features: t('catGallery.cats.eva.features', { returnObjects: true }) as string[]
     },
     {
       id: 5,
-      name: "Hanna",
-      breed: "Scottish Fold",
-      age: "11 weeks",
-      gender: "Female",
+      name: t('catGallery.cats.hanna.name'),
+      breed: t('catGallery.cats.hanna.breed'),
+      age: "11 " + t('common.weeks'),
+      gender: t('common.female'),
       color: "Cream",
       price: "$1,350",
       status: "available",
       image: "/Hanna.jpg",
-      description: "Beautiful cream Scottish Fold with perfect fold ears and sweet personality.",
-      features: ["Show quality", "Health tested", "Vaccinated", "Pedigreed"]
+      description: t('catGallery.cats.hanna.description'),
+      features: t('catGallery.cats.hanna.features', { returnObjects: true }) as string[]
     }
   ];
 
@@ -139,11 +141,11 @@ const CatGallery = () => {
   const getStatusText = (status: string) => {
     switch (status) {
       case 'available':
-        return 'Available';
+        return t('catGallery.available');
       case 'reserved':
-        return 'Reserved';
+        return t('catGallery.reserved');
       case 'sold':
-        return 'Sold';
+        return t('catGallery.sold');
       default:
         return status;
     }
@@ -175,7 +177,7 @@ const CatGallery = () => {
                 color: colors.text
               }}
             >
-              Find Your Perfect Companion! 😻
+              {t('catGallery.title')}
             </motion.h2>
             <motion.p 
               className="text-xl max-w-3xl mx-auto leading-relaxed"
@@ -184,7 +186,7 @@ const CatGallery = () => {
                 color: colors.muted
               }}
             >
-              Ready to adopt or purchase your new family member? 🏠💕 Meet our beautiful cats looking for their forever homes. Each kitty is health tested, vaccinated, and raised with endless love!
+              {t('catGallery.subtitle')}
             </motion.p>
           </motion.div>
 
@@ -256,7 +258,7 @@ const CatGallery = () => {
                             color: colors.muted
                           }}
                         >
-                          Breed:
+                          {t('catGallery.breed')}:
                         </span>
                         <span 
                           style={{ 
@@ -275,7 +277,7 @@ const CatGallery = () => {
                             color: colors.muted
                           }}
                         >
-                          Age:
+                          {t('catGallery.age')}:
                         </span>
                         <span 
                           style={{ 
@@ -294,7 +296,7 @@ const CatGallery = () => {
                             color: colors.muted
                           }}
                         >
-                          Gender:
+                          {t('catGallery.gender')}:
                         </span>
                         <span 
                           style={{ 
@@ -313,7 +315,7 @@ const CatGallery = () => {
                             color: colors.muted
                           }}
                         >
-                          Color:
+                          {t('catGallery.color')}:
                         </span>
                         <span 
                           style={{ 
@@ -371,8 +373,8 @@ const CatGallery = () => {
                         handleCatClick(cat);
                       }}
                     >
-                      {cat.status === 'available' ? 'View Details' : 
-                       cat.status === 'reserved' ? 'Reserved' : 'Sold'}
+                      {cat.status === 'available' ? t('catGallery.viewDetails') : 
+                       cat.status === 'reserved' ? t('catGallery.reserved') : t('catGallery.sold')}
                     </Button>
                   </div>
                 </Card>
@@ -392,7 +394,7 @@ const CatGallery = () => {
                 color: colors.muted
               }}
             >
-              Interested in one of our cats? Contact us to learn more or schedule a visit.
+              {t('catGallery.interestedText')}
             </p>
             <Button 
               size="lg"
@@ -403,7 +405,7 @@ const CatGallery = () => {
                 fontFamily: fonts.sans
               }}
             >
-              Contact Us Today
+              {t('catGallery.contactUsToday')}
             </Button>
           </motion.div>
         </motion.div>

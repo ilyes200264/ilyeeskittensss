@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { colors } from '@/config/colors';
@@ -21,6 +22,7 @@ import {
 const Contact = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const { t } = useTranslation();
   
   const [formData, setFormData] = useState({
     name: '',
@@ -82,26 +84,26 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      details: ["(438) 342-4290", "Call or Text Welcome"],
+      title: t('contact.contactInfo.phone.title'),
+      details: [t('contact.contactInfo.phone.number'), t('contact.contactInfo.phone.subtitle')],
       action: "tel:+14383424290"
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: ["info@snowbrisco.com", "Quick Response Guaranteed"],
+      title: t('contact.contactInfo.email.title'),
+      details: [t('contact.contactInfo.email.address'), t('contact.contactInfo.email.subtitle')],
       action: "mailto:info@snowbrisco.com"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Location",
-      details: ["Ontario, Canada", "Visits by Appointment"],
+      title: t('contact.contactInfo.location.title'),
+      details: [t('contact.contactInfo.location.address'), t('contact.contactInfo.location.subtitle')],
       action: null
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Business Hours",
-      details: ["Mon-Sat: 9AM - 6PM", "Sun: 10AM - 4PM"],
+      title: t('contact.contactInfo.hours.title'),
+      details: [t('contact.contactInfo.hours.weekdays'), t('contact.contactInfo.hours.weekend')],
       action: null
     }
   ];
@@ -161,7 +163,7 @@ const Contact = () => {
                 color: colors.text
               }}
             >
-              Get In Touch
+              {t('contact.title')}
             </motion.h2>
             <motion.p 
               className="text-xl max-w-3xl mx-auto leading-relaxed"
@@ -170,8 +172,7 @@ const Contact = () => {
                 color: colors.muted
               }}
             >
-              Ready to welcome a new furry family member? We'd love to hear from you! 
-              Contact us to learn more about our available cats or schedule a visit.
+              {t('contact.subtitle')}
             </motion.p>
           </motion.div>
 
@@ -191,7 +192,7 @@ const Contact = () => {
                       color: colors.text
                     }}
                   >
-                    Send Us a Message
+                    {t('contact.sendMessage')}
                   </h3>
                 </div>
 
@@ -205,7 +206,7 @@ const Contact = () => {
                           fontFamily: fonts.sans
                         }}
                       >
-                        Your Name *
+                        {t('contact.yourName')} {t('common.required')}
                       </label>
                       <input
                         type="text"
@@ -219,7 +220,7 @@ const Contact = () => {
                           fontFamily: fonts.sans,
                           backgroundColor: colors.background
                         }}
-                        placeholder="Enter your name"
+                        placeholder={t('contact.enterYourName')}
                       />
                     </div>
                     <div>
@@ -230,7 +231,7 @@ const Contact = () => {
                           fontFamily: fonts.sans
                         }}
                       >
-                        Email Address *
+                        {t('contact.emailAddress')} {t('common.required')}
                       </label>
                       <input
                         type="email"
@@ -244,7 +245,7 @@ const Contact = () => {
                           fontFamily: fonts.sans,
                           backgroundColor: colors.background
                         }}
-                        placeholder="Enter your email"
+                        placeholder={t('contact.enterYourEmail')}
                       />
                     </div>
                   </div>
@@ -258,7 +259,7 @@ const Contact = () => {
                           fontFamily: fonts.sans
                         }}
                       >
-                        Phone Number
+                        {t('contact.phoneNumber')}
                       </label>
                       <input
                         type="tel"
@@ -271,7 +272,7 @@ const Contact = () => {
                           fontFamily: fonts.sans,
                           backgroundColor: colors.background
                         }}
-                        placeholder="Enter your phone"
+                        placeholder={t('contact.enterYourPhone')}
                       />
                     </div>
                     <div>
@@ -282,12 +283,13 @@ const Contact = () => {
                           fontFamily: fonts.sans
                         }}
                       >
-                        Interested Cat
+                        {t('contact.interestedCat')}
                       </label>
                       <select
                         name="catInterest"
                         value={formData.catInterest}
                         onChange={handleInputChange}
+                        title={t('contact.interestedCat')}
                         className="w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2"
                         style={{ 
                           borderColor: colors.border,
@@ -295,13 +297,13 @@ const Contact = () => {
                           backgroundColor: colors.background
                         }}
                       >
-                        <option value="">Select a cat</option>
+                        <option value="">{t('contact.selectACat')}</option>
                         <option value="simba">Simba - Scottish Fold</option>
                         <option value="elvis">Elvis - Scottish Straight</option>
                         <option value="kiara">Kiara - Scottish Fold</option>
                         <option value="eva">Eva - British Shorthair</option>
                         <option value="hanna">Hanna - Scottish Fold</option>
-                        <option value="general">General Inquiry</option>
+                        <option value="general">{t('contact.generalInquiry')}</option>
                       </select>
                     </div>
                   </div>
@@ -314,7 +316,7 @@ const Contact = () => {
                         fontFamily: fonts.sans
                       }}
                     >
-                      Your Message *
+                      {t('contact.yourMessage')} {t('common.required')}
                     </label>
                     <textarea
                       name="message"
@@ -328,7 +330,7 @@ const Contact = () => {
                         fontFamily: fonts.sans,
                         backgroundColor: colors.background
                       }}
-                      placeholder="Tell us about yourself, your living situation, and any questions you have..."
+                      placeholder={t('contact.messagePlaceholder')}
                     />
                   </div>
 
@@ -343,11 +345,11 @@ const Contact = () => {
                     }}
                   >
                     {isSubmitting ? (
-                      "Sending..."
+                      t('contact.sending')
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
-                        Send Message
+                        {t('contact.sendMessageButton')}
                       </>
                     )}
                   </Button>
@@ -419,7 +421,7 @@ const Contact = () => {
                   }}
                 >
                   <Heart className="w-5 h-5 mr-2" style={{ color: colors.accent }} />
-                  Follow Our Journey
+                  {t('contact.followOurJourney')}
                 </h4>
                 <p 
                   className="text-sm mb-4"
@@ -428,7 +430,7 @@ const Contact = () => {
                     color: colors.muted
                   }}
                 >
-                  Stay updated with our latest cats, news, and adorable moments!
+                  {t('contact.stayUpdated')}
                 </p>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
@@ -459,7 +461,7 @@ const Contact = () => {
                     color: colors.text
                   }}
                 >
-                  Prefer to Call?
+                  {t('contact.preferToCall')}
                 </h4>
                 <p 
                   className="text-sm mb-4"
@@ -468,7 +470,7 @@ const Contact = () => {
                     color: colors.muted
                   }}
                 >
-                  We're here to answer all your questions!
+                  {t('contact.hereToAnswer')}
                 </p>
                 <Button
                   className="font-medium transition-all duration-300 hover:shadow-lg"
@@ -477,10 +479,10 @@ const Contact = () => {
                     color: colors.white,
                     fontFamily: fonts.sans
                   }}
-                  onClick={() => window.open('tel:+15551234567', '_self')}
+                  onClick={() => window.open('tel:+14383424290', '_self')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  {t('contact.callNow')}
                 </Button>
               </Card>
             </motion.div>

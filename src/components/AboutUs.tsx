@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { colors } from '@/config/colors';
 
 const AboutUs = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const { t } = useTranslation();
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -26,24 +28,24 @@ const AboutUs = () => {
 
   const features = [
     {
-      number: "3+",
-      label: "Years of Pure Joy",
-      description: "Creating magical moments since 2021! 🎉"
+      number: t('about.stats.yearsOfJoy.number'),
+      label: t('about.stats.yearsOfJoy.label'),
+      description: t('about.stats.yearsOfJoy.description')
     },
     {
-      number: "500+",
-      label: "Happy Families",
-      description: "Furry babies loving life in amazing homes! 🏠💕"
+      number: t('about.stats.happyFamilies.number'),
+      label: t('about.stats.happyFamilies.label'),
+      description: t('about.stats.happyFamilies.description')
     },
     {
-      number: "3",
-      label: "Amazing Breeds",
-      description: "Scottish Fold, Scottish Straight & British Shorthair cuties! 😻"
+      number: t('about.stats.amazingBreeds.number'),
+      label: t('about.stats.amazingBreeds.label'),
+      description: t('about.stats.amazingBreeds.description')
     },
     {
-      number: "100%",
-      label: "Love Guarantee",
-      description: "Every kitty comes with our promise of endless love! 💖"
+      number: t('about.stats.loveGuarantee.number'),
+      label: t('about.stats.loveGuarantee.label'),
+      description: t('about.stats.loveGuarantee.description')
     }
   ];
 
@@ -73,7 +75,7 @@ const AboutUs = () => {
                 color: colors.text
               }}
             >
-              Our Amazing Journey! 🚀
+              {t('about.title')}
             </motion.h2>
             <motion.p 
               className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed px-2"
@@ -82,7 +84,7 @@ const AboutUs = () => {
                 color: colors.muted
               }}
             >
-              Hey there, fellow cat lover! 😻 Since 2021, we've been living our dream - raising the most adorable, cuddly, and loving kitties you'll ever meet! Every day is filled with purrs, play time, and pure happiness! 
+              {t('about.subtitle')}
             </motion.p>
           </motion.div>
 
@@ -98,7 +100,7 @@ const AboutUs = () => {
                     color: colors.text
                   }}
                 >
-                  How It All Started! 💫
+                  {t('about.howItStarted')}
                 </h3>
                 <div 
                   className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed"
@@ -108,13 +110,13 @@ const AboutUs = () => {
                   }}
                 >
                   <p>
-                    Picture this: We fell head-over-heels in love with cats and thought, "Why not share this incredible joy with the world?" 🌍💕 That's how SnowBrisco was born - from pure love and a dream to connect amazing kitties with their perfect families!
+                    {t('about.paragraph1')}
                   </p>
                   <p>
-                    We're totally obsessed with three incredible breeds - Scottish Fold (those adorable folded ears! 😍), Scottish Straight (elegant and playful!), and British Shorthair (chunky and lovable!) - each one bringing their own special magic to our hearts and homes.
+                    {t('about.paragraph2')}
                   </p>
                   <p>
-                    Every single one of our fur babies grows up surrounded by love, cuddles, belly rubs, and all the attention they deserve! They're not just cats to us - they're family members getting ready to make YOUR family complete! 👨‍👩‍👧‍👦✨
+                    {t('about.paragraph3')}
                   </p>
                 </div>
               </div>
@@ -127,7 +129,7 @@ const AboutUs = () => {
                     color: colors.text
                   }}
                 >
-                  What Makes Us Special! 🌟
+                  {t('about.whatMakesUsSpecial')}
                 </h4>
                 <ul 
                   className="space-y-2 sm:space-y-3 text-sm sm:text-base"
@@ -138,19 +140,19 @@ const AboutUs = () => {
                 >
                   <li className="flex items-start">
                     <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">💖</span>
-                    <span className="leading-relaxed">We breed with our hearts - every kitty gets tons of love and socialization!</span>
+                    <span className="leading-relaxed">{t('about.specialFeatures.breedWithHearts')}</span>
                   </li>
                   <li className="flex items-start">
                     <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">🏥</span>
-                    <span className="leading-relaxed">Top-notch health care and genetic testing - because healthy = happy!</span>
+                    <span className="leading-relaxed">{t('about.specialFeatures.topNotchHealthCare')}</span>
                   </li>
                   <li className="flex items-start">
                     <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">🎾</span>
-                    <span className="leading-relaxed">Play time, cuddle time, and socialization from day one!</span>
+                    <span className="leading-relaxed">{t('about.specialFeatures.playTime')}</span>
                   </li>
                   <li className="flex items-start">
                     <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">🤝</span>
-                    <span className="leading-relaxed">We're here for you and your furry friend - forever and always!</span>
+                    <span className="leading-relaxed">{t('about.specialFeatures.foreverSupport')}</span>
                   </li>
                 </ul>
               </div>
@@ -177,7 +179,7 @@ const AboutUs = () => {
                       color: colors.text
                     }}
                   >
-                    Meet Simba! 🦁✨
+                    {t('about.simbaTitle')}
                   </h4>
                   <p 
                     className="text-sm"
@@ -186,7 +188,7 @@ const AboutUs = () => {
                       color: colors.muted
                     }}
                   >
-                    One of our precious Scottish Fold superstars! 🌟
+                    {t('about.simbaDescription')}
                   </p>
                 </div>
               </Card>

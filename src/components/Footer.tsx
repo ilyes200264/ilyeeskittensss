@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { colors } from '@/config/colors';
 import { fonts } from '@/config/fonts';
 import { 
@@ -19,6 +20,7 @@ import {
 const Footer = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const { t } = useTranslation();
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -37,24 +39,24 @@ const Footer = () => {
   };
 
   const quickLinks = [
-    { name: 'Our Story', href: '#about' },
-    { name: 'Meet Our Babies', href: '#cats' },
-    { name: 'Chat With Us', href: '#contact' },
-    { name: 'Come Visit!', href: '#contact' }
+    { name: t('footer.quickLinks.ourStory'), href: '#about' },
+    { name: t('footer.quickLinks.meetOurBabies'), href: '#cats' },
+    { name: t('footer.quickLinks.chatWithUs'), href: '#contact' },
+    { name: t('footer.quickLinks.comeVisit'), href: '#contact' }
   ];
 
   const catBreeds = [
-    { name: 'Scottish Fold Cuties', href: '#cats' },
-    { name: 'Scottish Straight Sweeties', href: '#cats' },
-    { name: 'British Shorthair Beauties', href: '#cats' },
-    { name: 'All Our Babies', href: '#cats' }
+    { name: t('footer.catBreeds.scottishFoldCuties'), href: '#cats' },
+    { name: t('footer.catBreeds.scottishStraightSweeties'), href: '#cats' },
+    { name: t('footer.catBreeds.britishShorthairBeauties'), href: '#cats' },
+    { name: t('footer.catBreeds.allOurBabies'), href: '#cats' }
   ];
 
   const services = [
-    { name: 'Health Promise', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Champion Parents', icon: <Award className="w-4 h-4" /> },
-    { name: 'Forever Friends', icon: <Heart className="w-4 h-4" /> },
-    { name: 'Always Here for You', icon: <Clock className="w-4 h-4" /> }
+    { name: t('footer.services.healthPromise'), icon: <Shield className="w-4 h-4" /> },
+    { name: t('footer.services.championParents'), icon: <Award className="w-4 h-4" /> },
+    { name: t('footer.services.foreverFriends'), icon: <Heart className="w-4 h-4" /> },
+    { name: t('footer.services.alwaysHereForYou'), icon: <Clock className="w-4 h-4" /> }
   ];
 
   const socialLinks = [
@@ -120,13 +122,13 @@ const Footer = () => {
                       className="text-xl font-bold text-white"
                       style={{ fontFamily: fonts.display }}
                     >
-                      snowbrisco
+                      {t('navbar.brand')}
                     </h3>
                     <p 
                       className="text-sm text-white/70"
                       style={{ fontFamily: fonts.sans }}
                     >
-                      Where Love Begins 💕
+                      {t('navbar.tagline')}
                     </p>
                   </div>
                 </div>
@@ -135,7 +137,7 @@ const Footer = () => {
                   className="text-white/80 text-sm leading-relaxed mb-6"
                   style={{ fontFamily: fonts.body }}
                 >
-                  Since 2021, we've been the proud cat parents behind SnowBrisco, where every kitty is raised with endless cuddles and love! 🐱 Our Scottish Fold, Scottish Straight, and British Shorthair babies can't wait to meet their forever families and bring joy to your world!
+                  {t('footer.companyDescription')}
                 </p>
 
                 {/* Services Icons */}
@@ -162,7 +164,7 @@ const Footer = () => {
                   className="text-lg font-bold text-white mb-6"
                   style={{ fontFamily: fonts.display }}
                 >
-                  Let's Connect!
+                  {t('footer.quickLinks.title')}
                 </h4>
                 <ul className="space-y-3">
                   {quickLinks.map((link, index) => (
@@ -185,7 +187,7 @@ const Footer = () => {
                   className="text-lg font-bold text-white mb-6"
                   style={{ fontFamily: fonts.display }}
                 >
-                  Our Adorable Breeds
+                  {t('footer.catBreeds.title')}
                 </h4>
                 <ul className="space-y-3">
                   {catBreeds.map((breed, index) => (
@@ -208,7 +210,7 @@ const Footer = () => {
                   className="text-lg font-bold text-white mb-6"
                   style={{ fontFamily: fonts.display }}
                 >
-                  Let's Chat! 💬
+                  {t('footer.contactSection.title')}
                 </h4>
                 
                 <div className="space-y-4">
@@ -226,7 +228,7 @@ const Footer = () => {
                         className="text-xs text-white/60"
                         style={{ fontFamily: fonts.sans }}
                       >
-                        Call or text us anytime! 📱
+                        {t('footer.contactSection.phoneSubtitle')}
                       </p>
                     </div>
                   </div>
@@ -245,7 +247,7 @@ const Footer = () => {
                         className="text-xs text-white/60"
                         style={{ fontFamily: fonts.sans }}
                       >
-                        We reply super fast! ⚡
+                        {t('footer.contactSection.emailSubtitle')}
                       </p>
                     </div>
                   </div>
@@ -263,7 +265,7 @@ const Footer = () => {
                         className="text-xs text-white/60"
                         style={{ fontFamily: fonts.sans }}
                       >
-                        Come meet our babies!
+                        {t('footer.contactSection.locationSubtitle')}
                       </p>
                     </div>
                   </div>
@@ -275,7 +277,7 @@ const Footer = () => {
                     className="text-sm font-semibold text-white mb-3"
                     style={{ fontFamily: fonts.display }}
                   >
-                    Follow Our Adventures! 📸
+                    {t('footer.contactSection.socialTitle')}
                   </h5>
                   <div className="flex space-x-3">
                     {socialLinks.map((social, index) => (
@@ -319,7 +321,7 @@ const Footer = () => {
                   className="text-white/60 text-sm"
                   style={{ fontFamily: fonts.sans }}
                 >
-                  © {currentYear} SnowBrisco - Creating magical moments, one paw at a time 🐾✨
+                  © {currentYear} SnowBrisco - {t('footer.copyright')}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-white/50 flex-wrap justify-center">
                   <a 
@@ -327,7 +329,7 @@ const Footer = () => {
                     className="hover:text-white/70 transition-colors"
                     style={{ fontFamily: fonts.sans }}
                   >
-                    Privacy Stuff
+                    {t('footer.links.privacyStuff')}
                   </a>
                   <span className="hidden sm:inline">•</span>
                   <a 
@@ -335,7 +337,7 @@ const Footer = () => {
                     className="hover:text-white/70 transition-colors"
                     style={{ fontFamily: fonts.sans }}
                   >
-                    Terms & Love
+                    {t('footer.links.termsAndLove')}
                   </a>
                   <span className="hidden sm:inline">•</span>
                   <a 
@@ -343,7 +345,7 @@ const Footer = () => {
                     className="hover:text-white/70 transition-colors"
                     style={{ fontFamily: fonts.sans }}
                   >
-                    Kitty Care Tips
+                    {t('footer.links.kittyCare')}
                   </a>
                 </div>
               </div>
@@ -353,7 +355,7 @@ const Footer = () => {
                   className="text-white/60 text-sm"
                   style={{ fontFamily: fonts.sans }}
                 >
-                  Made with
+                  {t('footer.madeWith')}
                 </span>
                 <Heart 
                   className="w-4 h-4 text-red-400 fill-current" 
@@ -362,7 +364,7 @@ const Footer = () => {
                   className="text-white/60 text-sm"
                   style={{ fontFamily: fonts.sans }}
                 >
-                  and lots of cat hair! 😸
+                  {t('footer.catHair')}
                 </span>
               </div>
             </div>

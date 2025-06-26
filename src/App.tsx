@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
@@ -6,20 +7,21 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { assets } from './config';
 
-
 function App() {
+  const { t } = useTranslation();
+
   const heroContent = {
-    title: "ADORABLE KITTENS 🐱",
-    subtitle: "Your Purrfect Companion is Here!",
-    description: "Welcome to SnowBrisco! 😻 We raise Scottish Fold, Scottish Straight, and British Shorthair babies with tons of love!",
+    title: t('hero.title'),
+    subtitle: t('hero.subtitle'),
+    description: t('hero.description'),
     features: [
-      "💖 Love Guaranteed",
-      "🏆 Champion Bloodlines", 
-      "💉 Fully Protected",
-      "🎾 Super Playful"
+      t('hero.features.loveGuaranteed'),
+      t('hero.features.championBloodlines'),
+      t('hero.features.fullyProtected'),
+      t('hero.features.superPlayful')
     ],
-    ctaText: "FIND MY FURRY BESTIE!",
-    ctaDescription: "Ready to fall in love? 🏠💕",
+    ctaText: t('hero.ctaText'),
+    ctaDescription: t('hero.ctaDescription'),
     // Background video path from public folder
     backgroundImage: "/video.mp4", // Using video.mp4 instead of simbavideo.mp4
   };

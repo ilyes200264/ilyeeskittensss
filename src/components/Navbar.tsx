@@ -1,23 +1,26 @@
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { fonts } from '@/config/fonts';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const { t } = useTranslation();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
   });
 
   const navItems = [
-    { name: 'Our Story', href: '#about' },
-    { name: 'Available Cats', href: '#cats' },
-    { name: 'Contact', href: '#contact' }
+    { name: t('navbar.ourStory'), href: '#about' },
+    { name: t('navbar.availableCats'), href: '#cats' },
+    { name: t('navbar.contact'), href: '#contact' }
   ];
 
   const handleFindPetClick = () => {
@@ -60,7 +63,7 @@ const Navbar = () => {
                 }`}
                 style={{ fontFamily: fonts.display }}
               >
-                snowbrisco
+                {t('navbar.brand')}
               </span>
               <span 
                 className={`text-xs font-medium transition-colors duration-300 ${
@@ -68,7 +71,7 @@ const Navbar = () => {
                 }`}
                 style={{ fontFamily: fonts.sans }}
               >
-                Where Love Begins 💕
+                {t('navbar.tagline')}
               </span>
             </div>
           </motion.div>
@@ -95,8 +98,9 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button and Language Toggle */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageToggle isScrolled={isScrolled} />
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -113,13 +117,14 @@ const Navbar = () => {
                 style={{ fontFamily: fonts.sans }}
                 onClick={handleFindPetClick}
               >
-                FIND A PET
+                {t('navbar.findAPet')}
               </Button>
             </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageToggle isScrolled={isScrolled} />
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button
@@ -148,13 +153,13 @@ const Navbar = () => {
                         className="text-lg font-bold text-slate-900"
                         style={{ fontFamily: fonts.display }}
                       >
-                        snowbrisco
+                        {t('navbar.brand')}
                       </span>
                       <span 
                         className="text-xs text-slate-600 font-medium"
                         style={{ fontFamily: fonts.sans }}
                       >
-                        Where Love Begins 💕
+                        {t('navbar.tagline')}
                       </span>
                     </div>
                   </div>
@@ -188,7 +193,7 @@ const Navbar = () => {
                         handleFindPetClick();
                       }}
                     >
-                      FIND A PET
+                      {t('navbar.findAPet')}
                     </Button>
                   </div>
                 </div>
