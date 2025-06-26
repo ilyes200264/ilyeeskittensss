@@ -118,10 +118,11 @@ const Hero = ({
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-4xl mx-auto"
         >
           {/* Main Headline */}
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 tracking-tight text-white drop-shadow-2xl px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 tracking-tight text-white drop-shadow-2xl px-2"
             style={{ fontFamily: fonts.display }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -130,53 +131,79 @@ const Hero = ({
             {title}
           </motion.h1>
           
-          {/* Subtitle */}
-          <motion.p 
-            className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-2xl mx-auto font-light text-white drop-shadow-lg px-2"
-            style={{ fontFamily: fonts.body }}
+          {/* New Content Structure */}
+          <motion.div
+            className="space-y-6 sm:space-y-8 mb-8 sm:mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {subtitle}
-          </motion.p>
-
-          {/* Description */}
-          {description && (
+            {/* First Paragraph */}
             <motion.p 
-              className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto text-white leading-relaxed drop-shadow-lg px-2"
+              className="text-lg sm:text-xl md:text-2xl font-medium text-white drop-shadow-lg px-2 leading-relaxed"
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              {description}
+              Des chatons élevés avec amour, prêts à rejoindre leur nouvelle famille.
             </motion.p>
-          )}
 
-          {/* Features List */}
-          {features && features.length > 0 && (
-            <motion.div 
-              className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8 max-w-4xl mx-auto px-2"
+            {/* Second Paragraph */}
+            <motion.p 
+              className="text-base sm:text-lg md:text-xl text-white drop-shadow-lg px-2 leading-relaxed max-w-3xl mx-auto"
+              style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm md:text-base text-white drop-shadow-md"
-                  style={{ fontFamily: fonts.sans }}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.05 }}
-                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
-                >
-                  ✓ {feature}
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
+              Chez SnowBrisco, on élève des Scottish Fold, Scottish Straight et British Shorthair dans un cadre doux, sain et rempli d'attention.
+            </motion.p>
+
+            {/* Third Paragraph */}
+            <motion.p 
+              className="text-base sm:text-lg md:text-xl text-white drop-shadow-lg px-2 leading-relaxed max-w-4xl mx-auto"
+              style={{ fontFamily: fonts.body }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              Nos chatons sont câlins, joueurs, bien socialisés, et suivis de près par notre vétérinaire. Ils viennent de lignées équilibrées et sont prêts à créer un vrai lien avec vous.
+            </motion.p>
+
+            {/* Fourth Paragraph */}
+            <motion.p 
+              className="text-lg sm:text-xl md:text-2xl font-medium text-white drop-shadow-lg px-2 leading-relaxed"
+              style={{ fontFamily: fonts.body }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              Vous cherchez un compagnon attachant, beau et bien dans ses pattes ?
+            </motion.p>
+
+            {/* Fifth Paragraph */}
+            <motion.p 
+              className="text-base sm:text-lg md:text-xl text-white drop-shadow-lg px-2 leading-relaxed"
+              style={{ fontFamily: fonts.body }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
+              Venez découvrir nos petits trésors.
+            </motion.p>
+
+            {/* Sixth Paragraph */}
+            <motion.p 
+              className="text-lg sm:text-xl md:text-2xl font-medium text-white drop-shadow-lg px-2 leading-relaxed"
+              style={{ fontFamily: fonts.body }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              Le coup de cœur n'est jamais bien loin.
+            </motion.p>
+          </motion.div>
 
           {/* CTA Description */}
           {ctaDescription && (
@@ -185,7 +212,7 @@ const Hero = ({
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
             >
               {ctaDescription}
             </motion.p>
@@ -196,7 +223,7 @@ const Hero = ({
             className="mb-12 sm:mb-16 px-2"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button 
