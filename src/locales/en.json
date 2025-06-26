@@ -1,67 +1,67 @@
 {
   "navbar": {
     "brand": "snowbrisco",
-    "tagline": "Where Love Begins 💕",
+    "tagline": "Where Love Begins",
     "ourStory": "Our Story",
     "availableCats": "Available Cats",
     "contact": "Contact",
     "findAPet": "FIND A PET"
   },
   "hero": {
-    "title": "ADORABLE KITTENS 🐱",
+    "title": "ADORABLE KITTENS",
     "subtitle": "Your Purrfect Companion is Here!",
-    "description": "Welcome to SnowBrisco! 😻 We raise Scottish Fold, Scottish Straight, and British Shorthair babies with tons of love!",
+    "description": "Welcome to SnowBrisco! We raise Scottish Fold, Scottish Straight, and British Shorthair babies with tons of love!",
     "features": {
-      "loveGuaranteed": "💖 Love Guaranteed",
-      "championBloodlines": "🏆 Champion Bloodlines",
-      "fullyProtected": "💉 Fully Protected",
-      "superPlayful": "🎾 Super Playful"
+      "loveGuaranteed": "Love Guaranteed",
+      "championBloodlines": "Champion Bloodlines",
+      "fullyProtected": "Fully Protected",
+      "superPlayful": "Super Playful"
     },
-    "ctaText": "FIND MY FURRY BESTIE!",
-    "ctaDescription": "Ready to fall in love? 🏠💕"
+    "ctaText": "FIND MY FURRY BEST FRIEND!",
+    "ctaDescription": "Ready to fall in love?"
   },
   "about": {
-    "title": "Our Amazing Journey! 🚀",
-    "subtitle": "Hey there, fellow cat lover! 😻 Since 2021, we've been living our dream - raising the most adorable, cuddly, and loving kitties you'll ever meet! Every day is filled with purrs, play time, and pure happiness!",
-    "howItStarted": "How It All Started! 💫",
-    "paragraph1": "Picture this: We fell head-over-heels in love with cats and thought, \"Why not share this incredible joy with the world?\" 🌍💕 That's how SnowBrisco was born - from pure love and a dream to connect amazing kitties with their perfect families!",
-    "paragraph2": "We're totally obsessed with three incredible breeds - Scottish Fold (those adorable folded ears! 😍), Scottish Straight (elegant and playful!), and British Shorthair (chunky and lovable!) - each one bringing their own special magic to our hearts and homes.",
-    "paragraph3": "Every single one of our fur babies grows up surrounded by love, cuddles, belly rubs, and all the attention they deserve! They're not just cats to us - they're family members getting ready to make YOUR family complete! 👨‍👩‍👧‍👦✨",
-    "whatMakesUsSpecial": "What Makes Us Special! 🌟",
+    "title": "Our Amazing Journey!",
+    "subtitle": "Hey there, fellow cat lover! Since 2021, we've been living our dream - raising the most adorable, cuddly, and loving kitties you'll ever meet! Every day is filled with purrs, play time, and pure happiness!",
+    "howItStarted": "How It All Started!",
+    "paragraph1": "Picture this: We fell head over paws in love with cats and thought, \"Why not share this incredible joy with the world?\" That's how SnowBrisco was born - from pure love and a dream to connect amazing kitties with their perfect families!",
+    "paragraph2": "We're totally obsessed with three incredible breeds - Scottish Fold (those adorable folded ears!), Scottish Straight (elegant and playful!), and British Shorthair (chunky and lovable!) - each one bringing their own special magic to our hearts and homes.",
+    "paragraph3": "Each of our furry babies grows up surrounded by love, cuddles, belly rubs, and all the attention they deserve! These aren't just cats to us - they're family members getting ready to make YOUR family complete!",
+    "whatMakesUsSpecial": "What Makes Us Special!",
     "specialFeatures": {
       "breedWithHearts": "We breed with our hearts - every kitty gets tons of love and socialization!",
-      "topNotchHealthCare": "Top-notch health care and genetic testing - because healthy = happy!",
+      "topNotchHealthCare": "Top-notch healthcare and genetic testing - because healthy = happy!",
       "playTime": "Play time, cuddle time, and socialization from day one!",
       "foreverSupport": "We're here for you and your furry friend - forever and always!"
     },
-    "simbaTitle": "Meet Simba! 🦁✨",
-    "simbaDescription": "One of our precious Scottish Fold superstars! 🌟",
+    "simbaTitle": "Meet Simba!",
+    "simbaDescription": "One of our precious Scottish Fold superstars!",
     "stats": {
       "yearsOfJoy": {
         "number": "3+",
         "label": "Years of Pure Joy",
-        "description": "Creating magical moments since 2021! 🎉"
+        "description": "Creating magical moments since 2021!"
       },
       "happyFamilies": {
         "number": "500+",
         "label": "Happy Families",
-        "description": "Furry babies loving life in amazing homes! 🏠💕"
+        "description": "Furry babies loving life in amazing homes!"
       },
       "amazingBreeds": {
         "number": "3",
         "label": "Amazing Breeds",
-        "description": "Scottish Fold, Scottish Straight & British Shorthair cuties! 😻"
+        "description": "Scottish Fold, Scottish Straight & British Shorthair cuties!"
       },
       "loveGuarantee": {
         "number": "100%",
         "label": "Love Guarantee",
-        "description": "Every kitty comes with our promise of endless love! 💖"
+        "description": "Every kitty comes with our promise of endless love!"
       }
     }
   },
   "catGallery": {
-    "title": "Find Your Perfect Companion! 😻",
-    "subtitle": "Ready to adopt or purchase your new family member? 🏠💕 Meet our beautiful cats looking for their forever homes. Each kitty is health tested, vaccinated, and raised with endless love!",
+    "title": "Find Your Perfect Companion!",
+    "subtitle": "Ready to adopt or purchase your new family member? Meet our beautiful cats looking for their forever homes. Each kitty is health tested, vaccinated, and raised with endless love!",
     "available": "Available",
     "reserved": "Reserved",
     "sold": "Sold",
@@ -76,20 +76,20 @@
       "simba": {
         "name": "Simba",
         "breed": "Scottish Fold",
-        "description": "Beautiful golden Scottish Fold with perfect ears and sweet temperament.",
-        "features": ["Health tested", "Vaccinated", "Pedigreed", "Home raised"]
+        "description": "Beautiful golden Scottish Fold with perfect ears and gentle temperament.",
+        "features": ["Health tested", "Vaccinated", "With pedigree", "Home raised"]
       },
       "elvis": {
         "name": "Elvis",
         "breed": "Scottish Straight",
-        "description": "Handsome Scottish Straight with striking blue point coloring and gentle personality.",
-        "features": ["Health tested", "Vaccinated", "Pedigreed", "Socialized"]
+        "description": "Beautiful Scottish Straight with striking blue point coloring and gentle personality.",
+        "features": ["Health tested", "Vaccinated", "With pedigree", "Socialized"]
       },
       "kiara": {
         "name": "Kiara",
         "breed": "Scottish Fold",
-        "description": "Stunning silver tabby Scottish Fold with perfect fold ears and loving nature.",
-        "features": ["Champion bloodline", "Health tested", "Vaccinated", "Registered"]
+        "description": "Beautiful silver tabby Scottish Fold with perfectly folded ears and loving nature.",
+        "features": ["Champion lineage", "Health tested", "Vaccinated", "Registered"]
       },
       "eva": {
         "name": "Eva",
@@ -100,19 +100,19 @@
       "hanna": {
         "name": "Hanna",
         "breed": "Scottish Fold",
-        "description": "Beautiful cream Scottish Fold with perfect fold ears and sweet personality.",
-        "features": ["Show quality", "Health tested", "Vaccinated", "Pedigreed"]
+        "description": "Beautiful cream Scottish Fold with perfectly folded ears and gentle personality.",
+        "features": ["Show quality", "Health tested", "Vaccinated", "With pedigree"]
       }
     }
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "Get in Touch",
     "subtitle": "Ready to welcome a new furry family member? We'd love to hear from you! Contact us to learn more about our available cats or schedule a visit.",
     "sendMessage": "Send Us a Message",
     "yourName": "Your Name",
     "emailAddress": "Email Address",
     "phoneNumber": "Phone Number",
-    "interestedCat": "Interested Cat",
+    "interestedCat": "Cat of Interest",
     "yourMessage": "Your Message",
     "selectACat": "Select a cat",
     "generalInquiry": "General Inquiry",
@@ -126,7 +126,7 @@
       "phone": {
         "title": "Phone",
         "number": "(438) 342-4290",
-        "subtitle": "Call or Text Welcome"
+        "subtitle": "Calls or Texts Welcome"
       },
       "email": {
         "title": "Email",
@@ -139,19 +139,19 @@
         "subtitle": "Visits by Appointment"
       },
       "hours": {
-        "title": "Business Hours",
+        "title": "Opening Hours",
         "weekdays": "Mon-Sat: 9AM - 6PM",
         "weekend": "Sun: 10AM - 4PM"
       }
     },
     "followOurJourney": "Follow Our Journey",
-    "stayUpdated": "Stay updated with our latest cats, news, and adorable moments!",
+    "stayUpdated": "Stay updated on our latest cats, news, and adorable moments!",
     "preferToCall": "Prefer to Call?",
     "hereToAnswer": "We're here to answer all your questions!",
     "callNow": "Call Now"
   },
   "footer": {
-    "companyDescription": "Since 2021, we've been the proud cat parents behind SnowBrisco, where every kitty is raised with endless cuddles and love! 🐱 Our Scottish Fold, Scottish Straight, and British Shorthair babies can't wait to meet their forever families and bring joy to your world!",
+    "companyDescription": "Since 2021, we're the proud cat parents behind SnowBrisco, where every kitty is raised with endless cuddles and love! Our Scottish Fold, Scottish Straight, and British Shorthair babies can't wait to meet their forever families and bring joy to your world!",
     "services": {
       "healthPromise": "Health Promise",
       "championParents": "Champion Parents",
@@ -162,31 +162,31 @@
       "title": "Let's Connect!",
       "ourStory": "Our Story",
       "meetOurBabies": "Meet Our Babies",
-      "chatWithUs": "Chat With Us",
-      "comeVisit": "Come Visit!"
+      "chatWithUs": "Chat with Us",
+      "comeVisit": "Come Visit Us!"
     },
     "catBreeds": {
       "title": "Our Adorable Breeds",
-      "scottishFoldCuties": "Scottish Fold Cuties",
-      "scottishStraightSweeties": "Scottish Straight Sweeties",
-      "britishShorthairBeauties": "British Shorthair Beauties",
+      "scottishFoldCuties": "Cute Scottish Folds",
+      "scottishStraightSweeties": "Sweet Scottish Straights",
+      "britishShorthairBeauties": "Beautiful British Shorthairs",
       "allOurBabies": "All Our Babies"
     },
     "contactSection": {
-      "title": "Let's Chat! 💬",
-      "phoneSubtitle": "Call or text us anytime! 📱",
-      "emailSubtitle": "We reply super fast! ⚡",
+      "title": "Let's Chat!",
+      "phoneSubtitle": "Call or text us anytime!",
+      "emailSubtitle": "We reply super fast!",
       "locationSubtitle": "Come meet our babies!",
-      "socialTitle": "Follow Our Adventures! 📸"
+      "socialTitle": "Follow Our Adventures!"
     },
-    "copyright": "Creating magical moments, one paw at a time 🐾✨",
+    "copyright": "Creating magical moments, one paw at a time",
     "links": {
       "privacyStuff": "Privacy Stuff",
-      "termsAndLove": "Terms & Love",
+      "termsAndLove": "Terms and Love",
       "kittyCare": "Kitty Care Tips"
     },
     "madeWith": "Made with",
-    "catHair": "and lots of cat hair! 😸"
+    "catHair": "and lots of cat hair!"
   },
   "common": {
     "required": "*",

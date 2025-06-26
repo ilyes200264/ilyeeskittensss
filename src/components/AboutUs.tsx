@@ -139,19 +139,19 @@ const AboutUs = () => {
                   }}
                 >
                   <li className="flex items-start">
-                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">💖</span>
+                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">•</span>
                     <span className="leading-relaxed">{t('about.specialFeatures.breedWithHearts')}</span>
                   </li>
                   <li className="flex items-start">
-                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">🏥</span>
+                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">•</span>
                     <span className="leading-relaxed">{t('about.specialFeatures.topNotchHealthCare')}</span>
                   </li>
                   <li className="flex items-start">
-                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">🎾</span>
+                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">•</span>
                     <span className="leading-relaxed">{t('about.specialFeatures.playTime')}</span>
                   </li>
                   <li className="flex items-start">
-                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">🤝</span>
+                    <span style={{ color: colors.accent }} className="mr-2 sm:mr-3 mt-1 text-sm sm:text-base">•</span>
                     <span className="leading-relaxed">{t('about.specialFeatures.foreverSupport')}</span>
                   </li>
                 </ul>
