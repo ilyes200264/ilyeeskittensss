@@ -128,15 +128,25 @@ const Hero = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            {title}
+            Des chatons élevés avec amour, prêts à rejoindre leur famille.
           </motion.h1>
-          
+
+          <motion.p
+            className="text-lg sm:text-xl md:text-2xl font-medium text-white drop-shadow-lg px-2 leading-relaxed mb-8 sm:mb-12"
+            style={{ fontFamily: fonts.body }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Scottish Fold, Scottish Straight et British Shorthair, bien dans leurs pattes, à découvrir chez SnowBrisco.
+          </motion.p>
+
           {/* New Content Structure */}
           <motion.div
             className="space-y-6 sm:space-y-8 mb-8 sm:mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             {/* First Paragraph */}
             <motion.p 
@@ -144,9 +154,9 @@ const Hero = ({
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Des chatons élevés avec amour, prêts à rejoindre leur nouvelle famille.
+              Nos chatons sont câlins, joueurs, bien socialisés, et suivis de près par notre vétérinaire. Ils viennent de lignées équilibrées et sont prêts à créer un vrai lien avec vous.
             </motion.p>
 
             {/* Second Paragraph */}
@@ -155,9 +165,9 @@ const Hero = ({
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Chez SnowBrisco, on élève des Scottish Fold, Scottish Straight et British Shorthair dans un cadre doux, sain et rempli d'attention.
+              Vous cherchez un compagnon attachant, beau et bien dans ses pattes ?
             </motion.p>
 
             {/* Third Paragraph */}
@@ -166,9 +176,9 @@ const Hero = ({
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Nos chatons sont câlins, joueurs, bien socialisés, et suivis de près par notre vétérinaire. Ils viennent de lignées équilibrées et sont prêts à créer un vrai lien avec vous.
+              Venez découvrir nos petits trésors.
             </motion.p>
 
             {/* Fourth Paragraph */}
@@ -177,29 +187,7 @@ const Hero = ({
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              Vous cherchez un compagnon attachant, beau et bien dans ses pattes ?
-            </motion.p>
-
-            {/* Fifth Paragraph */}
-            <motion.p 
-              className="text-base sm:text-lg md:text-xl text-white drop-shadow-lg px-2 leading-relaxed"
-              style={{ fontFamily: fonts.body }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              Venez découvrir nos petits trésors.
-            </motion.p>
-
-            {/* Sixth Paragraph */}
-            <motion.p 
-              className="text-lg sm:text-xl md:text-2xl font-medium text-white drop-shadow-lg px-2 leading-relaxed"
-              style={{ fontFamily: fonts.body }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
             >
               Le coup de cœur n'est jamais bien loin.
             </motion.p>
@@ -212,7 +200,7 @@ const Hero = ({
               style={{ fontFamily: fonts.body }}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
             >
               {ctaDescription}
             </motion.p>
@@ -223,7 +211,7 @@ const Hero = ({
             className="mb-12 sm:mb-16 px-2"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 1.0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button 
