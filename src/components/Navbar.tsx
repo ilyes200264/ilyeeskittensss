@@ -15,11 +15,17 @@ const Navbar = () => {
   });
 
   const navItems = [
-    { name: 'Heritage', href: '#about' },
-    { name: 'Available Cats', href: '#kittens' },
-    { name: 'Adoption', href: '#adoption' },
+    { name: 'Our Story', href: '#about' },
+    { name: 'Available Cats', href: '#cats' },
     { name: 'Contact', href: '#contact' }
   ];
+
+  const handleFindPetClick = () => {
+    const catsSection = document.querySelector('#cats');
+    if (catsSection) {
+      catsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <motion.nav
@@ -62,7 +68,7 @@ const Navbar = () => {
                 }`}
                 style={{ fontFamily: fonts.sans }}
               >
-                Premium Cattery
+                Where Love Begins 💕
               </span>
             </div>
           </motion.div>
@@ -105,6 +111,7 @@ const Navbar = () => {
                     : 'bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-slate-900'
                 }`}
                 style={{ fontFamily: fonts.sans }}
+                onClick={handleFindPetClick}
               >
                 FIND A PET
               </Button>
@@ -147,7 +154,7 @@ const Navbar = () => {
                         className="text-xs text-slate-600 font-medium"
                         style={{ fontFamily: fonts.sans }}
                       >
-                        Premium Cattery
+                        Where Love Begins 💕
                       </span>
                     </div>
                   </div>
@@ -176,7 +183,10 @@ const Navbar = () => {
                     <Button 
                       className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium py-3"
                       style={{ fontFamily: fonts.sans }}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        handleFindPetClick();
+                      }}
                     >
                       FIND A PET
                     </Button>

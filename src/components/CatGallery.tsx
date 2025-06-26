@@ -175,7 +175,7 @@ const CatGallery = () => {
                 color: colors.text
               }}
             >
-              Available Cats
+              Find Your Perfect Companion! 😻
             </motion.h2>
             <motion.p 
               className="text-xl max-w-3xl mx-auto leading-relaxed"
@@ -184,7 +184,7 @@ const CatGallery = () => {
                 color: colors.muted
               }}
             >
-              Meet our beautiful cats looking for their forever homes. Each cat is health tested, vaccinated, and raised with love.
+              Ready to adopt or purchase your new family member? 🏠💕 Meet our beautiful cats looking for their forever homes. Each kitty is health tested, vaccinated, and raised with endless love!
             </motion.p>
           </motion.div>
 

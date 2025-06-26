@@ -9,21 +9,19 @@ import { assets } from './config';
 
 function App() {
   const heroContent = {
-    title: "CATS & KITTENS FOR SALE",
-    subtitle: "Find Your New Best Friend",
-    description: "Welcome to SnowBrisco Premium Cattery - your trusted source for exceptional Scottish Fold, Scottish Straight, and British Shorthair cats. We specialize in breeding healthy, well-socialized cats with outstanding temperaments and stunning appearances.",
+    title: "ADORABLE KITTENS 🐱",
+    subtitle: "Your Purrfect Companion is Here!",
+    description: "Welcome to SnowBrisco! 😻 We raise Scottish Fold, Scottish Straight, and British Shorthair babies with tons of love!",
     features: [
-      "Health Guaranteed",
-      "Purebred Certified",
-      "Fully Vaccinated",
-      "Well Socialized",
-      "30+ Years Experience",
-      "Professional Breeding"
+      "💖 Love Guaranteed",
+      "🏆 Champion Bloodlines", 
+      "💉 Fully Protected",
+      "🎾 Super Playful"
     ],
-    ctaText: "GET STARTED",
-    ctaDescription: "Ready to welcome a new furry family member? Browse our available cats or schedule a visit to meet them in person.",
-    // Background image path from assets named hero
-    backgroundImage: assets.cats.hero, // Using your local hero.jpg image.
+    ctaText: "FIND MY FURRY BESTIE!",
+    ctaDescription: "Ready to fall in love? 🏠💕",
+    // Background video path from public folder
+    backgroundImage: "/video.mp4", // Using video.mp4 instead of simbavideo.mp4
   };
 
   const handleHeroCta = () => {
